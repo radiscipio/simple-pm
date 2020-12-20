@@ -1,3 +1,5 @@
+<%= link_to 'Back', projects_path, class: 'btn btn-dark mb-3' %>
+
 <div class="card">
   <div class="card-body"> 
     <h2 class='card-title d-flex justify-content-between mb-4'>
@@ -33,24 +35,6 @@
 
   </div>
 </div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @project.user_id %>
-</p>
-
-|
-<%= link_to 'Back', projects_path %>
 
 <hr>
 
