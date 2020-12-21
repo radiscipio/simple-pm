@@ -25,6 +25,8 @@
             </div>
           <% end %>
 
+          <% f.hidden_field :status, value: 'not-started' %>
+          
           <div class="input-group">
             <%= f.text_field :name, class: 'form-control', placeholder: 'Enter task name' %>
               <div class='input-group-append'>
@@ -42,8 +44,8 @@
               <h5 class='card-title d-flex justify-content-between mb-4'>
                 <span><%= task.name %></span>
                 <div>
-                  <%= link_to 'Edit', edit_project_task_path(task.project, task), class: 'btn btn-warning' %>
-                  <%= link_to 'Delete', [task.project, task], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Edit', edit_project_task_path(task.project, task), class: 'btn btn-warning btn-sm' %>
+                  <%= link_to 'Delete', [task.project, task], method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %>
                 </div>
               </h5>
               <p><%= task.description %> </p>
